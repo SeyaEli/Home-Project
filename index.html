@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./vars.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>The Ridge Realty Group - Pahrump Real Estate</title>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Header Navigation -->
+    <header class="header">
+      <div class="header-content">
+        <button class="burger-menu" aria-label="Menu" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <img src="Image/logo.webp" alt="The Ridge Realty Group Logo" class="header-logo">
+      </div>
+      <nav class="mobile-menu" id="mobileMenu">
+        <ul>
+          <li><a href="#home" onclick="closeMenu()">Home</a></li>
+          <li><a href="#listings" onclick="closeMenu()">Listings</a></li>
+          <li><a href="#move" onclick="closeMenu()">Let's Move</a></li>
+          <li><a href="#about" onclick="closeMenu()">About Us</a></li>
+        </ul>
+      </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <img class="hero-image" src="Image/bg1.webp" alt="Pahrump Nevada landscape">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <div class="hero-subtitle">MARCI METZGER - THE RIDGE REALTY GROUP</div>
+          <div class="hero-title">PAHRUMP REALTOR</div>
+          <button class="btn-hero">CALL NOW</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+      <div class="profile-container">
+        <div class="profile-left">
+          <img class="profile-image" src="Image/Marci.webp" alt="Marci Metzger">
+          <div class="profile-title">MARCI METZGER</div>
+          <div class="profile-subtitle">REALTOR FOR NEARLY 3 DECADES</div>
+          <div class="phone-number">702-210-8888</div>
+        </div>
+        <div class="profile-right">
+          <div class="profile-text">
+            #1 Residential Sales Team in Pahrump - Last 5 Years! Now, owners of The Ridge Realty Group
+          brokerage in Pahrump, NV. Allow Marci to guide you through the buying/selling process. Previously
+              in the Greater Seattle Area, Marci has been a REALTOR since 1995. 
+            Call Today! - B1002787
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Get It Sold Section -->
+    <section class="sold-section">
+      <div class="sold-header">GET IT SOLD</div>
+      <div class="sold-content">
+        <div class="sold-item">
+          <img src="Image/getitsold1.webp" alt="Premium Property Marketing" class="sold-image">
+          <div class="sold-text">
+            <div class="sold-title">Premium Property Marketing</div>
+            <div class="sold-description">
+              Professional photography, virtual tours, and strategic online marketing ensure your property gets maximum exposure. Our proven marketing system reaches qualified buyers through multiple channels, resulting in faster sales at optimal prices.
+            </div>
+          </div>
+        </div>
+        <div class="sold-item">
+          <div class="sold-text">
+            <div class="sold-title">Expert Market Analysis</div>
+            <div class="sold-description">
+              Accurate pricing is crucial for a successful sale. We provide comprehensive market analysis using the latest comparable sales data, current market trends, and neighborhood insights to position your property competitively from day one.
+            </div>
+          </div>
+          <img src="Image/getitsold2.webp" alt="Market Analysis" class="sold-image">
+        </div>
+        <div class="sold-item">
+          <img src="Image/getitsold3.webp" alt="Negotiation Excellence" class="sold-image">
+          <div class="sold-text">
+            <div class="sold-title">Negotiation Excellence</div>
+            <div class="sold-description">
+              With nearly three decades of experience, we handle all negotiations professionally to secure the best terms for you. From initial offers to closing details, we protect your interests while maintaining positive relationships with all parties.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search Filters Section -->
+    <section class="search-section">
+      <div class="search-header">FIND YOUR DREAM HOME</div>
+      <div class="search-container">
+        <div class="search-filters">
+          <div class="search-form-header">Search Listings</div>
+          <div class="filter-row">
+            <div class="filter-column">
+              <div class="form-group">
+                <select class="form-select" id="cityArea" required>
+                  <option value=""></option>
+                  <option>Pahrump</option>
+                  <option>Las Vegas</option>
+                  <option>Henderson</option>
+                </select>
+                <label for="cityArea" class="form-label">City/Area</label>
+              </div>
+              <div class="small-row">
+                <div class="form-group">
+                  <select class="form-select small" id="beds" required>
+                    <option value=""></option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4+</option>
+                  </select>
+                  <label for="beds" class="form-label">Beds</label>
+                </div>
+                <div class="form-group">
+                  <select class="form-select small" id="baths" required>
+                    <option value=""></option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4+</option>
+                  </select>
+                  <label for="baths" class="form-label">Baths</label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-column">
+              <div class="form-group">
+                <select class="form-select" id="propertyType" required>
+                  <option value=""></option>
+                  <option>Single Family</option>
+                  <option>Condo</option>
+                  <option>Townhouse</option>
+                  <option>Mobile Home</option>
+                </select>
+                <label for="propertyType" class="form-label">Property Type</label>
+              </div>
+              <div class="small-row">
+                <div class="form-group">
+                  <input type="text" class="form-input small" id="minPrice" required>
+                  <label for="minPrice" class="form-label">Min Price</label>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-input small" id="maxPrice" required>
+                  <label for="maxPrice" class="form-label">Max Price</label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-column">
+              <div class="form-group">
+                <select class="form-select" id="sortBy" required>
+                  <option value=""></option>
+                  <option>Most Expensive to Least</option>
+                  <option>Least Expensive to Most</option>
+                  <option>Newest First</option>
+                  <option>Oldest First</option>
+                </select>
+                <label for="sortBy" class="form-label">Sort By</label>
+              </div>
+              <button class="search-btn">Search Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logos Section -->
+    <section class="logos-section">
+      <div class="logos-container">
+        <img class="logo-image" src="image-60.png" alt="The Ridge Realty Group">
+        <img class="logo-image" src="image-70.png" alt="Equal Housing Opportunity">
+        <img class="logo-image" src="image-80.png" alt="Realtor">
+        <img class="logo-image" src="image-90.png" alt="Pahrump Valley Chamber">
+      </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="gallery-section">
+      <div class="gallery-header">PHOTO GALLERY</div>
+      <div class="gallery-main">
+        <img id="mainGalleryImage" src="Image/Gal1.webp" alt="Main Gallery Image" class="main-gallery-image">
+        <button class="gallery-nav-btn prev" onclick="previousImage()">‹</button>
+        <button class="gallery-nav-btn next" onclick="nextImage()">›</button>
+      </div>
+      <div class="gallery-thumbnails">
+        <img src="Image/Gal1.webp" alt="Property 1" class="gallery-thumb active" onclick="showImage(0)">
+        <img src="Image/gal2fin.webp" alt="Property 2" class="gallery-thumb" onclick="showImage(1)">
+        <img src="Image/Gal3.webp" alt="Property 3" class="gallery-thumb" onclick="showImage(2)">
+        <img src="Image/Gal4.webp" alt="Property 4" class="gallery-thumb" onclick="showImage(3)">
+        <img src="Image/Gal5.webp" alt="Property 5" class="gallery-thumb" onclick="showImage(4)">
+        <img src="Image/Gal6.webp" alt="Property 6" class="gallery-thumb" onclick="showImage(5)">
+        <img src="Image/Gal7.webp" alt="Property 7" class="gallery-thumb" onclick="showImage(6)">
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+      <div class="services-bg" id="servicesBg"></div>
+      <div class="services-content">
+        <div class="services-left">
+          <div class="services-header">OUR SERVICES</div>
+          <div class="services-title" id="servicesTitle">Real Estate Done Right</div>
+          <div class="services-text" id="servicesText">
+            Nervous about your property adventure? Don't be. Whether you're getting ready to buy or sell your residence, looking at investment properties, or just curious about the markets, our team ensures you get the best experience possible!
+          </div>
+        </div>
+        <div class="services-right">
+          <img class="service-icon active" src="Image/serv1.webp" alt="Real Estate" onclick="changeService(0)">
+          <img class="service-icon" src="Image/serv2.webp" alt="Commercial" onclick="changeService(1)">
+          <img class="service-icon" src="Image/serv3.webp" alt="Expertise" onclick="changeService(2)">
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Section -->
+    <section class="social-section">
+      <div class="social-icons">
+        <a href="#" class="social-icon facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+        <a href="#" class="social-icon instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+        <a href="#" class="social-icon linkedin">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+        <a href="#" class="social-icon yelp">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21.111 18.226c-.141.969-2.119 3.483-3.029 3.847-.311.125-.611.094-.85-.094-.154-.121-.262-.309-.262-.512 0-.338.229-.748.525-1.271.684-1.213 1.357-1.746 1.357-1.746.141-.109.309-.125.465-.047.359.18.935.709.794 1.823zM20.067 11.5c.684 1.289.684 2.549-.141 2.838-.154.055-.324.039-.465-.047 0 0-.672-.533-1.357-1.746-.295-.523-.525-.934-.525-1.271 0-.203.107-.391.262-.512.238-.188.539-.219.85-.094.91.364 2.888 2.878 3.029 3.847-.653-.015-.653-.015-.653-.015zM12.364 14.297c1.357 0 2.686.188 2.967.719.063.125.063.266 0 .391-.047.094-.141.172-.246.203-.229.078-.748.125-1.357.125s-1.127-.047-1.357-.125c-.105-.031-.199-.109-.246-.203-.063-.125-.063-.266 0-.391.281-.531 1.61-.719 2.967-.719-.728 0-.728 0-.728 0zM9.888 18.226c.141.969 2.119 3.483 3.029 3.847.311.125.611.094.85-.094.154-.121.262-.309.262-.512 0-.338-.229-.748-.525-1.271-.684-1.213-1.357-1.746-1.357-1.746-.141-.109-.309-.125-.465-.047-.359.18-.935.709-.794 1.823zM3.933 11.5c-.684 1.289-.684 2.549.141 2.838.154.055.324.039.465-.047 0 0 .672-.533 1.357-1.746.295-.523.525-.934.525-1.271 0-.203-.107-.391-.262-.512-.238-.188-.539-.219-.85-.094-.91.364-2.888 2.878-3.029 3.847.653-.015.653-.015.653-.015z"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+      <div class="contact-header">CALL OR VISIT</div>
+      <div class="contact-container">
+        <div class="contact-left">
+          <div class="contact-form-header">Send a Message</div>
+          <form class="contact-form">
+            <div class="form-group">
+              <input type="text" class="form-input" id="name" required>
+              <label for="name" class="form-label">Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-input" id="email" required>
+              <label for="email" class="form-label">Email</label>
+            </div>
+            <div class="form-group">
+              <textarea class="form-input" id="message" rows="4" required></textarea>
+              <label for="message" class="form-label">Message</label>
+            </div>
+            <button type="submit" class="btn-send">SEND</button>
+          </form>
+          <div class="disclaimer">This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</div>
+        </div>
+        <div class="contact-right">
+          <button class="btn-whatsapp">
+            <img src="whats-app0.png" alt="WhatsApp">
+            Message us on WhatsApp
+          </button>
+          <div class="contact-info">
+            <div class="contact-name">Marci Metzger - THE RIDGE REALTY GROUP</div>
+            <div class="contact-address">2700 HWY 160, Suite 4, Pahrump, Nevada 89048, United States</div>
+            <div class="office-hours">
+              <div class="hours-title">Office Hours</div>
+              <div class="hours-item">Mon-Today: 8:00 AM - 6:00 PM</div>
+              <div class="hours-item">Sun-Sat: 8:00 AM - 6:00 PM</div>
+              <div class="hours-note">Appointments outside office hours available upon request. Just ask!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Maps Section -->
+    <section class="maps-section">
+      <div class="maps-container">
+        <div class="map-wrapper">
+          <button class="directions-btn" onclick="openDirections()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21.71 11.29l-9-9a.996.996 0 00-1.41 0l-9 9A1 1 0 004 13h2v7a1 1 0 001 1h3v-6h4v6h3a1 1 0 001-1v-7h2a1 1 0 00.71-1.71z"/>
+            </svg>
+            GET DIRECTIONS
+          </button>
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3218.123456789!2d-115.98765!3d36.12345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s3190%20HW-160%2C%20Suite%20F%2C%20Pahrump%2C%20Nevada%2089048%2C%20United%20States!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" 
+            width="100%" 
+            height="350" 
+            style="border:0;border-radius:8px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-icons">
+          <a href="#" class="footer-icon facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="#" class="footer-icon instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+          <a href="#" class="footer-icon linkedin">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+          <a href="#" class="footer-icon yelp">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21.111 18.226c-.141.969-2.119 3.483-3.029 3.847-.311.125-.611.094-.85-.094-.154-.121-.262-.309-.262-.512 0-.338.229-.748.525-1.271.684-1.213 1.357-1.746 1.357-1.746.141-.109.309-.125.465-.047.359.18.935.709.794 1.823zM20.067 11.5c.684 1.289.684 2.549-.141 2.838-.154.055-.324.039-.465-.047 0 0-.672-.533-1.357-1.746-.295-.523-.525-.934-.525-1.271 0-.203.107-.391.262-.512.238-.188.539-.219.85-.094.91.364 2.888 2.878 3.029 3.847-.653-.015-.653-.015-.653-.015zM12.364 14.297c1.357 0 2.686.188 2.967.719.063.125.063.266 0 .391-.047.094-.141.172-.246.203-.229.078-.748.125-1.357.125s-1.127-.047-1.357-.125c-.105-.031-.199-.109-.246-.203-.063-.125-.063-.266 0-.391.281-.531 1.61-.719 2.967-.719-.728 0-.728 0-.728 0zM9.888 18.226c.141.969 2.119 3.483 3.029 3.847.311.125.611.094.85-.094.154-.121.262-.309.262-.512 0-.338-.229-.748-.525-1.271-.684-1.213-1.357-1.746-1.357-1.746-.141-.109-.309-.125-.465-.047-.359.18-.935.709-.794 1.823zM3.933 11.5c-.684 1.289-.684 2.549.141 2.838.154.055.324.039.465-.047 0 0 .672-.533 1.357-1.746.295-.523.525-.934.525-1.271 0-.203-.107-.391-.262-.512-.238-.188-.539-.219-.85-.094-.91.364-2.888 2.878-3.029 3.847.653-.015.653-.015.653-.015z"/>
+            </svg>
+          </a>
+        </div>
+        <div class="footer-text">Copyright © 2024 Marci Metzger Realtor - All Rights Reserved</div>
+        <div class="footer-subtext">Powered by</div>
+        <div class="footer-logo">GoDaddy</div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()">
+    ↑
+  </button>
+
+  <script>
+    const galleryImages = [
+      'Image/Gal1.webp',
+      'Image/Gal2.webp', 
+      'Image/Gal3.webp',
+      'Image/Gal4.webp',
+      'Image/Gal5.webp',
+      'Image/Gal6.webp',
+      'Image/Gal7.webp'
+    ];
+    
+    let currentImageIndex = 0;
+    
+    function showImage(index) {
+      currentImageIndex = index;
+      document.getElementById('mainGalleryImage').src = galleryImages[index];
+      
+      // Update active thumbnail
+      document.querySelectorAll('.gallery-thumb').forEach((thumb, i) => {
+        thumb.classList.toggle('active', i === index);
+      });
+    }
+    
+    function nextImage() {
+      currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+      showImage(currentImageIndex);
+    }
+    
+    function previousImage() {
+      currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+      showImage(currentImageIndex);
+    }
+    
+    // Services section functionality
+    const servicesData = [
+      {
+        title: "Real Estate Done Right",
+        text: "Nervous about your property adventure? Don't be. Whether you're getting ready to buy or sell your residence, looking at investment properties, or just curious about the markets, our team ensures you get the best experience possible!",
+        bg: "Image/serv1.webp"
+      },
+      {
+        title: "Commercial & Residential", 
+        text: "Large or small, condo or mansion, we can find it and get at the price that's right. Fixer-uppers? Luxury? We can help with all of it! We live, work, and play in this community. Happy to help you find where to put you hard-earned dollars.",
+        bg: "Image/serv2.webp"
+      },
+      {
+        title: "Rely on Expertise",
+        text: "If you have questions about affordability, credit, and loan options, trust us to connect you with the right people to get the answers you need in a timely fashion. We make sure you feel confident and educated every step of the way.",
+        bg: "Image/serv3.webp"
+      }
+    ];
+    
+    function changeService(index) {
+      const servicesBg = document.getElementById('servicesBg');
+      const servicesTitle = document.getElementById('servicesTitle');
+      const servicesText = document.getElementById('servicesText');
+      
+      // Update background
+      servicesBg.style.backgroundImage = `url('${servicesData[index].bg}')`;
+      
+      // Update text content
+      servicesTitle.textContent = servicesData[index].title;
+      servicesText.textContent = servicesData[index].text;
+      
+      // Update active icon
+      document.querySelectorAll('.service-icon').forEach((icon, i) => {
+        icon.classList.toggle('active', i === index);
+      });
+    }
+    
+    function openDirections() {
+      const address = encodeURIComponent('3190 HW-160, Suite F, Pahrump, Nevada 89048, United States');
+      window.open(`https://www.google.com/maps/dir/?api=1&destination=${address}`, '_blank');
+    }
+    
+    function toggleMenu() {
+      const burger = document.querySelector('.burger-menu');
+      const menu = document.getElementById('mobileMenu');
+      
+      burger.classList.toggle('active');
+      menu.classList.toggle('active');
+    }
+    
+    function closeMenu() {
+      const burger = document.querySelector('.burger-menu');
+      const menu = document.getElementById('mobileMenu');
+      
+      burger.classList.remove('active');
+      menu.classList.remove('active');
+    }
+    
+    // Scroll to top functionality
+    function scrollToTop() {
+      document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

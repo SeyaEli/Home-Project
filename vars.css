@@ -1,0 +1,46 @@
+/* Design Tokens - Colors */
+:root {
+  /* Background Colors */
+  --color-bg-dark: #272424;
+  --color-bg-light: #ffffff;
+  --color-bg-gray: #d9d9d9;
+  --color-bg-light-gray: #e8e5e5;
+  --color-bg-lighter-gray: #eeeeee;
+  --color-bg-cream: #fef2f2;
+  
+  /* Accent Colors */
+  --color-accent-green: #344a47;
+  --color-accent-gradient: radial-gradient(
+    closest-side,
+    rgba(255, 250, 250, 1) 56.25%,
+    rgba(197, 193, 193, 1) 74.52%,
+    rgba(153, 150, 150, 1) 90.87%
+  );
+  
+  /* Text Colors */
+  --color-text-white: #ffffff;
+  --color-text-black: #000000;
+  
+  /* Border Colors */
+  --color-border-dark: #413c3c;
+  --color-border-black: #000000;
+  --color-border-light: #fff8f8;
+  
+  /* Typography */
+  --font-family-primary: 'Inter', sans-serif;
+  --font-size-small: 8px;
+  --font-size-base: 9px;
+  --font-weight-regular: 400;
+  --letter-spacing: 0.1px;
+  --line-height-base: 20px;
+  
+  /* Spacing */
+  --border-radius-small: 2px;
+  --border-radius-medium: 5px;
+  --border-radius-large: 10px;
+  --border-radius-xlarge: 15px;
+  --border-radius-circle: 100px;
+  
+  /* Shadows */
+  --shadow-default: 0px 4px 4px 0px rgba(63, 51, 51, 0.25);
+}
